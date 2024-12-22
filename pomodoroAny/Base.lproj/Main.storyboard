@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pomodoroAny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light" translatesAutoresizingMaskIntoConstraints="NO" id="ipF-N6-Xz1">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghG-An-aFy">
+                                <rect key="frame" x="127" y="390" width="160" height="131"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" name="LabelColour"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxH-vt-U5S">
+                                <rect key="frame" x="104" y="510" width="206" height="63"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Time">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="LabelColour"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uku-6y-cTc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="085-fx-usT"/>
+                            <constraint firstItem="ghG-An-aFy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="342" id="2bT-Ea-yHU"/>
+                            <constraint firstItem="wxH-vt-U5S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="462" id="8RV-h7-RDl"/>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="centerX" secondItem="ghG-An-aFy" secondAttribute="centerX" id="EbE-fC-ePn"/>
+                            <constraint firstItem="ghG-An-aFy" firstAttribute="centerX" secondItem="wxH-vt-U5S" secondAttribute="centerX" id="EtG-le-8og"/>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I0e-jc-sQ1"/>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="centerY" secondItem="ghG-An-aFy" secondAttribute="centerY" id="S1x-ku-Bb0"/>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SZG-rl-rQY"/>
+                            <constraint firstItem="ipF-N6-Xz1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WH3-AX-NCd"/>
+                            <constraint firstItem="wxH-vt-U5S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="hdA-xW-oBb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wxH-vt-U5S" secondAttribute="bottom" constant="289" id="ma0-TH-HYc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="ghG-An-aFy" id="rr1-Md-mLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.57971014492756" y="-17.410714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="light" width="6000" height="9000"/>
+        <namedColor name="LabelColour">
+            <color red="0.53725492949999998" green="0.88627451660000001" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
